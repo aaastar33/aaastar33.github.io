@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>我的博客</title>
-</head>
-<body>
+---
+title: 博客
+---
 
 <h1>我的博客</h1>
 
 <ul>
-  
-</ul>
 
-</body>
-</html>
+{% for post in site.posts %}
+
+<li>
+<a href="{{ post.url }}">{{ post.title }}</a>
+<small>{{ post.date | date: "%Y-%m-%d" }}</small>
+</li>
+
+{% endfor %}
+
+</ul>
