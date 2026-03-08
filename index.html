@@ -132,10 +132,17 @@ color:#94a3b8;
 
 <h2>📝 技术博客</h2>
 
+<ul>
+{% for post in site.posts limit:5 %}
+<li>
+<a href="{{ post.url }}">{{ post.title }}</a>
+<small>{{ post.date | date: "%Y-%m-%d" }}</small>
+</li>
+{% endfor %}
+</ul>
+
 <p>
-<a href="/2026/03/08/first-blog.html">
-查看我的第一篇博客
-</a>
+<a href="/blog.html">查看更多博客 →</a>
 </p>
 <p>
 这里会记录我的学习笔记和技术成长。
